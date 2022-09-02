@@ -4,14 +4,14 @@ const circles=document.querySelectorAll(".circle")
 
 circles.forEach(element => {
  
-   if(element.dataset.status=="Confirmed"){
+   if(element.dataset.Status=="Confirmed"){
     element.style.background="red"
   
 
-   }else if(element.dataset.status=="Available"){
+   }else if(element.dataset.Status=="Available"){
     element.style.background="green"
 
-   }else if(element.dataset.status=="hold")
+   }else if(element.dataset.Status=="hold")
    element.style.background="orange"
   
 });
