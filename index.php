@@ -23,20 +23,20 @@ include "connect.php";
    <?php 
 
 
-$sql="select * from `customerbillinformation`";
+$sql="select * from `LCL`";
 $result=mysqli_query($con,$sql);
 
 
 if($result){
     while( $row=mysqli_fetch_assoc($result)){
         $id=$row['id'];
-        $name=$row['name'];
-        $ammount=$row['ammount'];
-        $status=$row['status'];
+        $TableNo=$row['TableNo'];
+        $Status=$row['Status'];
+        $Category=$row['Category'];
         echo '
-        <div class="circle" data-status='.$status.'>
-        <p class="name">'.$name.'</p>
-        <p class="ammoutn">'.$ammount.'</p>
+        <div class="circle" data-status='.$Status.'>
+        <p class="name">'.$TableNo.'</p>
+        <p class="category">'.$Category.'</p>
 
     </div>
         ';
