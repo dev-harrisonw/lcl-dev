@@ -1,0 +1,177 @@
+/* Styling Sheet for London Comedy Lunch Seating Plan */
+
+/* Background creation, and LCL Logo */
+
+    body {
+        background-color: #343a40;
+    }
+/*
+    img {
+        margin: auto;
+        display: block;
+    }
+
+    */
+
+    .main_div {
+        font-family: 'poppins';
+        font-size: 30px;
+        color: #fff;
+    }
+
+/*
+
+    #Platinum_Table {
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: auto;
+    }
+
+    #Silver_Table {
+        display: inline-table;
+        float: left;
+        table-layout: auto;
+    }
+
+    #Gold_Table {
+        display: inline-table;
+        float: right;
+        table-layout: fixed;
+    }
+
+    */
+
+    #Platinum_Table {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-33.5%) translateX(275%);
+    }
+
+    #Silver_Table {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-33.5%) translateX(100%);
+    }
+
+    #Gold_Table {
+      position:absolute;
+      top: 50%;
+      transform: translateY(-33.5%) translateX(450%);
+    }
+    
+     .Button_P {
+        padding: 12px 12px;
+        background-color: #bdbdbd;
+        opacity: 60%;
+        border-color: #fff;
+        border: 0 solid #fff;
+        border-radius: 50%;
+        -moz-box-shadow:    inset 0 0 4px #000000;
+        -webkit-box-shadow: inset 0 0 4px #000000;
+        box-shadow:         inset 0 0 4px #000000;
+        position: relative;
+        left: 0px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+     }
+
+     .Button_P:hover {
+        background-color: #808080;
+        transition: 0.7s;
+     }
+
+     .Button_S {
+        padding: 12px 12px;
+        background-color: #bdbdbd;
+        opacity: 65%;
+        border-color: #fff;
+        border: 0 solid #fff;
+        border-radius: 50%;
+        -moz-box-shadow:    inset 0 0 4px #000000;
+        -webkit-box-shadow: inset 0 0 4px #000000;
+        box-shadow:         inset 0 0 4px #000000;
+        position: relative;
+        left: 0px;
+        cursor: pointer;
+        transition: 0.3s;
+     }
+
+     .Button_S:hover{
+        background-color: #808080;
+        transition: 0.7s;
+     }
+
+
+     .Button_G {
+        padding: 12px 12px;
+        background-color: #bdbdbd;
+        opacity: 65%;
+        border-color: #fff;
+        border: 0 solid #fff;
+        border-radius: 50%;
+        -moz-box-shadow:    inset 0 0 4px #000000;
+        -webkit-box-shadow: inset 0 0 4px #000000;
+        box-shadow:         inset 0 0 4px #000000;
+        cursor: pointer;
+        transition: 0.3s;
+        position: relative;
+        right: 0px;
+     }
+
+     .Button_G:hover{
+        background-color: #808080;
+        transition: 0.7s;
+  
+     }
+
+     #platinum_text {
+      color: #fff;
+      text-shadow: 1px 1px 1px black, 0 0 35px black, 0 0 3px #fff;
+     }
+
+     #gold_text {
+      color: #fff;
+      text-shadow: 1px 1px 1px black, 0 0 35px black, 0 0 3px #fff;
+
+     }
+
+     #silver_text {
+      color: #fff;
+      text-shadow: 1px 1px 1px black, 0px 0px 35px black, 0 0 3px #fff;
+
+     }
+
+     /* table row scalining */
+
+     tr {
+        height: 40px;
+        width: 5px;
+     }
+
+     /* th adjustment */
+
+     th {
+        border-left: 2px solid #fff;
+        border-right: 2px solid #fff;
+        width: 275px;
+    }
+
+    /*
+
+    table {
+        border: 2px solid #fff;
+    }
+
+    
+
+
+/*
+    #Seats {
+        color: #fff;
+        font-family: 'Poppins';
+        text-decoration-line: underline;
+        position: relative;
+        text-align: center;
+        top: 105px;
+    }
+    
