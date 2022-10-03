@@ -59,7 +59,7 @@ echo("</table>");
 
 
 $sql="select * from `LCL`";
-$result=mysqli_query($con,$sql);
+$result=mysqli_query($conn,$sql);
 
 
 if($result){
