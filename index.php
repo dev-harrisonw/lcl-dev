@@ -13,7 +13,7 @@
     if ($getResults == FALSE)
         echo (sqlsrv_errors());
     while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-     echo ($row['TableNo'] . " " . $row['Status'] . PHP_EOL);
+     echo ($row['TableNo'] . " " . $row['Category'] . " " . $row['Status'] . PHP_EOL);
     }
     sqlsrv_free_stmt($getResults);
 ?>
