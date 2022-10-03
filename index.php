@@ -19,8 +19,43 @@ include "connect.php";
 <p> Hello World! </p>
     
 
+<?php
 
-   <?php 
+function mysql_query_or_die($query) {
+    $result = mysql_query($query);
+    if ($result)
+        return $result;
+    else {
+        $err = mysql_error();
+        die("<br>{$query}<br>*** {$err} ***<br>");
+    }
+}
+
+$query = "SELECT * FROM LCL";
+$result = mysql_query_or_die($query);
+echo("<table>");
+$first_row = true;
+while ($row = mysql_fetch_assoc($result)) {
+    if ($first_row) {
+        $first_row = false;
+        // Output header row from keys.
+        echo '<tr>';
+        foreach($row as $key => $field) {
+            echo '<th>' . htmlspecialchars($key) . '</th>';
+        }
+        echo '</tr>';
+    }
+    echo '<tr>';
+    foreach($row as $key => $field) {
+        echo '<td>' . htmlspecialchars($field) . '</td>';
+    }
+    echo '</tr>';
+}
+echo("</table>");
+
+?>
+
+<!--- <?php 
 
 
 $sql="select * from `LCL`";
@@ -43,7 +78,7 @@ if($result){
     }
 
 }
-?>
+?> --->
 
 </div>
 </body>
