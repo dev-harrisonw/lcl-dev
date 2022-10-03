@@ -29,10 +29,9 @@ $result=mysqli_query($con,$sql);
 
 if($result){
     while( $row=mysqli_fetch_assoc($result)){
-        $id=$row['id'];
-        $name=$row['name'];
-        $ammount=$row['ammount'];
-        $status=$row['status'];
+        $TableNo=$row['TableNo'];
+        $Category=$row['Category'];
+        $Status=$row['Status'];
         echo '
         <div class="circle" data-status='.$TableNo.'>
         <p class="name">'.$Category.'</p>
