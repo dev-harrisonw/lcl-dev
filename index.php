@@ -1,19 +1,52 @@
+
 <?php
-    $serverName = "londoncomedylunch.database.windows.net"; // update me
-    $connectionOptions = array(
-        "Database" => "LondonComedyLunch", // update me
-        "Uid" => "Inconnection_LCL", // update me
-        "PWD" => "Golfer70!" // update me
-    );
-    //Establishes the connection
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
-    $tsql= "SELECT * FROM LCL";
-    $getResults= sqlsrv_query($conn, $tsql);
-    echo ("Reading data from table" . PHP_EOL);
-    if ($getResults == FALSE)
-        echo (sqlsrv_errors());
-    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
-     echo ($row['TableNo'] . " " . $row['Category'] . " " . $row['Status'] . PHP_EOL);
-    }
-    sqlsrv_free_stmt($getResults);
+include "connect.php";
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="cricles">
+   
+
+    
+
+
+   <?php 
+
+
+$sql="select * from LCL";
+$result=mysqli_query($con,$sql);
+
+
+if($result){
+    while( $row=mysqli_fetch_assoc($result)){
+        $id=$row['id'];
+        $name=$row['name'];
+        $ammount=$row['ammount'];
+        $status=$row['status'];
+        echo '
+        <div class="circle" data-status='.$TableNo.'>
+        <p class="name">'.$Category.'</p>
+        <p class="ammoutn">'.$Status.'</p>
+
+    </div>
+        ';
+    }
+
+}
+?>
+
+</div>
+</body>
+
+<script src="index.js"></script>
+</html>

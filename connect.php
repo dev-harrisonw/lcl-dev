@@ -1,9 +1,12 @@
 <?php
-
-
-$con=new mysqli('tcp:londoncomedylunch.database.windows.net,1433','Inconnection_LCL','Golfer70!','LCL');//it connects to your server. positioning is matters.
-
-if(!$con){
-    die(mysqli_error($con));//if server has any problem it will show the error
-}
-?>
+    $serverName = "londoncomedylunch.database.windows.net"; // update me
+    $connectionOptions = array(
+        "Database" => "LondonComedyLunch", // update me
+        "Uid" => "Inconnection_LCL", // update me
+        "PWD" => "Golfer70!" // update me
+    );
+    //Establishes the connection
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+    $tsql= "SELECT * FROM LCL";
+    $getResults= sqlsrv_query($conn, $tsql);
+    ?>
